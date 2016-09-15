@@ -1,5 +1,6 @@
 site_name: VLSCI GenomeSpace Docs
 theme: cinder
+repo_url: "https://github.com/madiflannery/genomespace_docs/tree/master"
 pages:
 - Home: index.md
 - Building GenomeSpace:
