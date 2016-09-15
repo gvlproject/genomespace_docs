@@ -2,13 +2,33 @@
     "docs": [
         {
             "location": "/", 
-            "text": "VLSCI GenomeSpace documentation\n\n\n\n\nBuilding GenomeSpace Version 1.0\n\n\nBuilding GenomeSpace Version 2.0\n\n\nUpdating the SSL Certificate\n\n\nUpdating the GenomeSpace key", 
+            "text": "VLSCI GenomeSpace documentation\n\n\n\n\n\n\nBuilding GenomeSpace Version 1.0\n\n\n\n\n\n\nBuilding GenomeSpace Version 2.0\n\n\n\n\n\n\nUpdating the SSL Certificate\n\n\n\n\n\n\nUpdating the GenomeSpace key", 
             "title": "Home"
         }, 
         {
             "location": "/#vlsci-genomespace-documentation", 
-            "text": "Building GenomeSpace Version 1.0  Building GenomeSpace Version 2.0  Updating the SSL Certificate  Updating the GenomeSpace key", 
+            "text": "", 
             "title": "VLSCI GenomeSpace documentation"
+        }, 
+        {
+            "location": "/#building-genomespace-version-10", 
+            "text": "", 
+            "title": "Building GenomeSpace Version 1.0"
+        }, 
+        {
+            "location": "/#building-genomespace-version-20", 
+            "text": "", 
+            "title": "Building GenomeSpace Version 2.0"
+        }, 
+        {
+            "location": "/#updating-the-ssl-certificate", 
+            "text": "", 
+            "title": "Updating the SSL Certificate"
+        }, 
+        {
+            "location": "/#updating-the-genomespace-key", 
+            "text": "", 
+            "title": "Updating the GenomeSpace key"
         }, 
         {
             "location": "/build_gs_1.0/", 
