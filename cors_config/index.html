@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../img/favicon.ico">
 
-    <title>Updating the SSL Certificate - VLSCI GenomeSpace Docs</title>
+    <title>AWS CORS Config - VLSCI GenomeSpace Docs</title>
 
     <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -96,8 +96,8 @@
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Updating the SSL Certificate</a>
+<li >
+    <a href="../ssl_update/">Updating the SSL Certificate</a>
 </li>
 
                         
@@ -108,8 +108,8 @@
 
                         
                             
-<li >
-    <a href="../cors_config/">AWS CORS Config</a>
+<li class="active">
+    <a href="./">AWS CORS Config</a>
 </li>
 
                         
@@ -128,12 +128,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../build_gs_2.0/">
+                        <a rel="next" href="../update_gs_key/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="prev" href="../update_gs_key/">
+                    <li class="disabled">
+                        <a rel="prev" >
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -158,34 +158,27 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#how-to-update-the-ssl-certificate-once-expired">How to update the SSL Certificate once expired</a></li>
+        <li class="first-level active"><a href="#aws-cors-configuration">AWS CORS Configuration</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="how-to-update-the-ssl-certificate-once-expired">How to update the SSL Certificate once expired</h3>
-<p>Ensure you have root access to the machine.</p>
-<pre><code>sudo su
-cd /mnt/genomespace/DEVDEPLOY/virgo/config
-</code></pre>
-
-<p>Remove all old keys and cert files from the directory.</p>
-<p>With the key and certificate in .pem format, do the following steps. You'll need to set a password, for consistency, use the one in the tomcat server.xml file under the SSL connector.</p>
-<pre><code>openssl pkcs12 -export -inkey genome-edu-au-2016.key -in genome-edu-au-2016.cer -name tomcat -out keystore.p12
-keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -destkeystore $JAVA_HOME/jre/lib/security/cacerts
-</code></pre>
-
-<p>If it errors because the certificate is already there, delete the existing one:</p>
-<pre><code>keytool -delete -alias tomcat -keystore $JAVA_HOME/jre/lib/security/cacerts
-</code></pre>
-
-<p>Finally, create the keystore file Tomcat will use</p>
-<pre><code>keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -deststoretype jks -destkeystore keystore
-</code></pre>
-
-<p>Then, follow the instructions to <a href="../update_gs_key/">update the genomespace secret key</a>, and rebuild the code.</p></div>
+<h1 id="aws-cors-configuration">AWS CORS Configuration</h1>
+<p>See below for the CORS config to add to the default AWS S3 bucket attached to GenomeSpace.</p>
+<pre><code>&lt;CORSConfiguration&gt;
+    &lt;CORSRule&gt;
+        &lt;AllowedOrigin&gt;PUT GENOMESPACE URL HERE&lt;/AllowedOrigin&gt;
+        &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;
+        &lt;AllowedMethod&gt;PUT&lt;/AllowedMethod&gt;
+        &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;
+        &lt;AllowedMethod&gt;DELETE&lt;/AllowedMethod&gt;
+        &lt;MaxAgeSeconds&gt;3000&lt;/MaxAgeSeconds&gt;
+        &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;
+    &lt;/CORSRule&gt;
+&lt;/CORSConfiguration&gt;
+</code></pre></div>
         
     </div>
 
