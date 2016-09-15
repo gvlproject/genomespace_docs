@@ -143,11 +143,18 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="first-level active"><a href="#building-v20-of-genomespace">Building v2.0 of GenomeSpace</a></li>
+        
+            <li class="second-level"><a href="#caching-issues">Caching issues</a></li>
+            
+        
+    
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>To build Version 2.0 (MongoDB) of GenomeSpace:</p>
+<h1 id="building-v20-of-genomespace">Building v2.0 of GenomeSpace</h1>
+<p>To build Version 2.0 (MongoDB/Tomcat7) of GenomeSpace:</p>
 <pre><code>sudo su
 cd /home/ubuntu/genomespace/SRC/combined
 mvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true
@@ -158,6 +165,7 @@ mvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomes
 <pre><code>sudo service tomcat7 restart
 </code></pre>
 
+<h2 id="caching-issues">Caching issues</h2>
 <p>If you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):</p>
 <pre><code>rm -r /var/lib/tomcat7/webapps/datamanager*
 rm -r /var/lib/tomcat7/webapps/atm*

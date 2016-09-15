@@ -151,7 +151,6 @@
         <div class="col-md-9" role="main">
 
 <h3 id="how-to-update-the-ssl-certificate-once-expired">How to update the SSL Certificate once expired</h3>
-<p>==============================================</p>
 <p>Ensure you have root access to the machine.</p>
 <pre><code>sudo su
 cd /mnt/genomespace/DEVDEPLOY/virgo/config
@@ -171,7 +170,7 @@ keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -destkeys
 <pre><code>keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -deststoretype jks -destkeystore keystore
 </code></pre>
 
-<p>Then, follow the instructions to <a href="https://tree.taiga.io/project/madiflannery-gvl-genomespace/wiki/updating-genomespace-secret-key">update the genomespace secret key</a>, and <a href="https://tree.taiga.io/project/madiflannery-gvl-genomespace/wiki/building-genomespace-10">rebuild the code</a>.</p></div>
+<p>Then, follow the instructions to <a href="../update_gs_key/">update the genomespace secret key</a>, and rebuild the code.</p></div>
         
     </div>
 

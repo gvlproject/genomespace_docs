@@ -143,11 +143,15 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="first-level active"><a href="#building-v10-of-genomespace">Building v1.0 of GenomeSpace</a></li>
+        
+    
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>To build Version 1.0 (SimpleDB) of GenomeSpace:</p>
+<h1 id="building-v10-of-genomespace">Building v1.0 of GenomeSpace</h1>
+<p>To build Version 1.0 (SimpleDB/Virgo) of GenomeSpace:</p>
 <pre><code>sudo su
 cd /mnt/genomespace/SRC/combined
 mvn clean install -PdeployLocal -Dmaven.test.skip=true -DskipTests
