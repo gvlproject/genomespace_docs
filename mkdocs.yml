@@ -9,3 +9,4 @@ pages:
 - Miscellaneous:
   - Updating the SSL Certificate: ssl_update.md
   - Updating the GS Key: update_gs_key.md
+  - AWS CORS Config: cors_config.md

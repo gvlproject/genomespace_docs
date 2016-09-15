@@ -4,3 +4,4 @@
 * [Building GenomeSpace Version 2.0](build_gs_2.0.md)
 * [Updating the SSL Certificate](ssl_update.md)
 * [Updating the GenomeSpace key](update_gs_key.md)
+* [AWS CORS configuration](cors_config.md)

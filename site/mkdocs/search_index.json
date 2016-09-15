@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "VLSCI GenomeSpace Documentation\n\n\n\n\nBuilding GenomeSpace Version 1.0\n\n\nBuilding GenomeSpace Version 2.0\n\n\nUpdating the SSL Certificate\n\n\nUpdating the GenomeSpace key", 
+            "text": "VLSCI GenomeSpace Documentation\n\n\n\n\nBuilding GenomeSpace Version 1.0\n\n\nBuilding GenomeSpace Version 2.0\n\n\nUpdating the SSL Certificate\n\n\nUpdating the GenomeSpace key\n\n\nAWS CORS configuration", 
             "title": "Home"
         }, 
         {
             "location": "/#vlsci-genomespace-documentation", 
-            "text": "Building GenomeSpace Version 1.0  Building GenomeSpace Version 2.0  Updating the SSL Certificate  Updating the GenomeSpace key", 
+            "text": "Building GenomeSpace Version 1.0  Building GenomeSpace Version 2.0  Updating the SSL Certificate  Updating the GenomeSpace key  AWS CORS configuration", 
             "title": "VLSCI GenomeSpace Documentation"
         }, 
         {
@@ -54,6 +54,16 @@
             "location": "/update_gs_key/#how-to-update-the-gs-secret-key", 
             "text": "cd /home/ubuntu/genomespace/gensecretkey\n./gengssecretkey.sh\nmv genomespace-secret.key ..\ncd ..\ncp genomespace-secret.key /root/genomespace  Finally, re-build the code.", 
             "title": "How to update the GS secret key"
+        }, 
+        {
+            "location": "/cors_config/", 
+            "text": "AWS CORS Configuration\n\n\nSee below for the CORS config to add to the default AWS S3 bucket attached to GenomeSpace.\n\n\nCORSConfiguration\n\n    \nCORSRule\n\n        \nAllowedOrigin\nPUT GENOMESPACE URL HERE\n/AllowedOrigin\n\n        \nAllowedMethod\nGET\n/AllowedMethod\n\n        \nAllowedMethod\nPUT\n/AllowedMethod\n\n        \nAllowedMethod\nPOST\n/AllowedMethod\n\n        \nAllowedMethod\nDELETE\n/AllowedMethod\n\n        \nMaxAgeSeconds\n3000\n/MaxAgeSeconds\n\n        \nAllowedHeader\n*\n/AllowedHeader\n\n    \n/CORSRule\n\n\n/CORSConfiguration", 
+            "title": "AWS CORS Config"
+        }, 
+        {
+            "location": "/cors_config/#aws-cors-configuration", 
+            "text": "See below for the CORS config to add to the default AWS S3 bucket attached to GenomeSpace.  CORSConfiguration \n     CORSRule \n         AllowedOrigin PUT GENOMESPACE URL HERE /AllowedOrigin \n         AllowedMethod GET /AllowedMethod \n         AllowedMethod PUT /AllowedMethod \n         AllowedMethod POST /AllowedMethod \n         AllowedMethod DELETE /AllowedMethod \n         MaxAgeSeconds 3000 /MaxAgeSeconds \n         AllowedHeader * /AllowedHeader \n     /CORSRule  /CORSConfiguration", 
+            "title": "AWS CORS Configuration"
         }
     ]
 }
