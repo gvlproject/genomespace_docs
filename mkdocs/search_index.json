@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "VLSCI GenomeSpace Documentation\n\n\n\n\nBuilding GenomeSpace Version 1.0\n\n\nBuilding GenomeSpace Version 2.0\n\n\nUpdating the SSL Certificate\n\n\nUpdating the GenomeSpace key", 
+            "text": "VLSCI GenomeSpace Documentation\n\n\n\n\nBuilding GenomeSpace Version 1.0\n\n\nBuilding GenomeSpace Version 2.0\n\n\nUpdating the SSL Certificate\n\n\nUpdating the GenomeSpace key\n\n\nAWS CORS configuration", 
             "title": "Home"
         }, 
         {
             "location": "/#vlsci-genomespace-documentation", 
-            "text": "Building GenomeSpace Version 1.0  Building GenomeSpace Version 2.0  Updating the SSL Certificate  Updating the GenomeSpace key", 
+            "text": "Building GenomeSpace Version 1.0  Building GenomeSpace Version 2.0  Updating the SSL Certificate  Updating the GenomeSpace key  AWS CORS configuration", 
             "title": "VLSCI GenomeSpace Documentation"
         }, 
         {
