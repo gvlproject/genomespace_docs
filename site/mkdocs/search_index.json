@@ -1,0 +1,59 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "VLSCI GenomeSpace Documentation\n\n\n\n\nBuilding GenomeSpace Version 1.0\n\n\nBuilding GenomeSpace Version 2.0\n\n\nUpdating the SSL Certificate\n\n\nUpdating the GenomeSpace key", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#vlsci-genomespace-documentation", 
+            "text": "Building GenomeSpace Version 1.0  Building GenomeSpace Version 2.0  Updating the SSL Certificate  Updating the GenomeSpace key", 
+            "title": "VLSCI GenomeSpace Documentation"
+        }, 
+        {
+            "location": "/build_gs_1.0/", 
+            "text": "Building v1.0 of GenomeSpace\n\n\nTo build Version 1.0 (SimpleDB/Virgo) of GenomeSpace:\n\n\nsudo su\ncd /mnt/genomespace/SRC/combined\nmvn clean install -PdeployLocal -Dmaven.test.skip=true -DskipTests\n\n\n\n\nTo start the server\n\n\ncd /mnt/genomespace/DEVDEPLOY/virgo/bin\n./startup.sh", 
+            "title": "Version 1.0"
+        }, 
+        {
+            "location": "/build_gs_1.0/#building-v10-of-genomespace", 
+            "text": "To build Version 1.0 (SimpleDB/Virgo) of GenomeSpace:  sudo su\ncd /mnt/genomespace/SRC/combined\nmvn clean install -PdeployLocal -Dmaven.test.skip=true -DskipTests  To start the server  cd /mnt/genomespace/DEVDEPLOY/virgo/bin\n./startup.sh", 
+            "title": "Building v1.0 of GenomeSpace"
+        }, 
+        {
+            "location": "/build_gs_2.0/", 
+            "text": "Building v2.0 of GenomeSpace\n\n\nTo build Version 2.0 (MongoDB/Tomcat7) of GenomeSpace:\n\n\nsudo su\ncd /home/ubuntu/genomespace/SRC/combined\nmvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true\n\n\n\n\nEnsure you have a env-dev.properties file in the home directory, which contains the URL's and credentials required for GenomeSpace. See \nthis example\n\n\nTo start the server\n\n\nsudo service tomcat7 restart\n\n\n\n\nCaching issues\n\n\nIf you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):\n\n\nrm -r /var/lib/tomcat7/webapps/datamanager*\nrm -r /var/lib/tomcat7/webapps/atm*\nrm -r /var/lib/tomcat7/webapps/identityServer*\nrm -r /var/lib/tomcat7/webapps/jsui*\n\n\n\n\nThen re-build the code and restart the server.", 
+            "title": "Version 2.0"
+        }, 
+        {
+            "location": "/build_gs_2.0/#building-v20-of-genomespace", 
+            "text": "To build Version 2.0 (MongoDB/Tomcat7) of GenomeSpace:  sudo su\ncd /home/ubuntu/genomespace/SRC/combined\nmvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true  Ensure you have a env-dev.properties file in the home directory, which contains the URL's and credentials required for GenomeSpace. See  this example  To start the server  sudo service tomcat7 restart", 
+            "title": "Building v2.0 of GenomeSpace"
+        }, 
+        {
+            "location": "/build_gs_2.0/#caching-issues", 
+            "text": "If you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):  rm -r /var/lib/tomcat7/webapps/datamanager*\nrm -r /var/lib/tomcat7/webapps/atm*\nrm -r /var/lib/tomcat7/webapps/identityServer*\nrm -r /var/lib/tomcat7/webapps/jsui*  Then re-build the code and restart the server.", 
+            "title": "Caching issues"
+        }, 
+        {
+            "location": "/ssl_update/", 
+            "text": "How to update the SSL Certificate once expired\n\n\nEnsure you have root access to the machine.\n\n\nsudo su\ncd /mnt/genomespace/DEVDEPLOY/virgo/config\n\n\n\n\nRemove all old keys and cert files from the directory.\n\n\nWith the key and certificate in .pem format, do the following steps. You'll need to set a password, for consistency, use the one in the tomcat server.xml file under the SSL connector.\n\n\nopenssl pkcs12 -export -inkey genome-edu-au-2016.key -in genome-edu-au-2016.cer -name tomcat -out keystore.p12\nkeytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -destkeystore $JAVA_HOME/jre/lib/security/cacerts\n\n\n\n\nIf it errors because the certificate is already there, delete the existing one:\n\n\nkeytool -delete -alias tomcat -keystore $JAVA_HOME/jre/lib/security/cacerts\n\n\n\n\nFinally, create the keystore file Tomcat will use\n\n\nkeytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -deststoretype jks -destkeystore keystore\n\n\n\n\nThen, follow the instructions to \nupdate the genomespace secret key\n, and rebuild the code.", 
+            "title": "Updating the SSL Certificate"
+        }, 
+        {
+            "location": "/ssl_update/#how-to-update-the-ssl-certificate-once-expired", 
+            "text": "Ensure you have root access to the machine.  sudo su\ncd /mnt/genomespace/DEVDEPLOY/virgo/config  Remove all old keys and cert files from the directory.  With the key and certificate in .pem format, do the following steps. You'll need to set a password, for consistency, use the one in the tomcat server.xml file under the SSL connector.  openssl pkcs12 -export -inkey genome-edu-au-2016.key -in genome-edu-au-2016.cer -name tomcat -out keystore.p12\nkeytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -destkeystore $JAVA_HOME/jre/lib/security/cacerts  If it errors because the certificate is already there, delete the existing one:  keytool -delete -alias tomcat -keystore $JAVA_HOME/jre/lib/security/cacerts  Finally, create the keystore file Tomcat will use  keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -deststoretype jks -destkeystore keystore  Then, follow the instructions to  update the genomespace secret key , and rebuild the code.", 
+            "title": "How to update the SSL Certificate once expired"
+        }, 
+        {
+            "location": "/update_gs_key/", 
+            "text": "How to update the GS secret key\n\n\ncd /home/ubuntu/genomespace/gensecretkey\n./gengssecretkey.sh\nmv genomespace-secret.key ..\ncd ..\ncp genomespace-secret.key /root/genomespace\n\n\n\n\nFinally, re-build the code.", 
+            "title": "Updating the GS Key"
+        }, 
+        {
+            "location": "/update_gs_key/#how-to-update-the-gs-secret-key", 
+            "text": "cd /home/ubuntu/genomespace/gensecretkey\n./gengssecretkey.sh\nmv genomespace-secret.key ..\ncd ..\ncp genomespace-secret.key /root/genomespace  Finally, re-build the code.", 
+            "title": "How to update the GS secret key"
+        }
+    ]
+}

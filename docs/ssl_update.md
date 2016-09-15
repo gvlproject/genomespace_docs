@@ -1,5 +1,4 @@
 ### How to update the SSL Certificate once expired
-==============================================
 
 Ensure you have root access to the machine.
 
@@ -26,4 +25,4 @@ Finally, create the keystore file Tomcat will use
 keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -deststoretype jks -destkeystore keystore
 ```
 
-Then, follow the instructions to [update the genomespace secret key](https://tree.taiga.io/project/madiflannery-gvl-genomespace/wiki/updating-genomespace-secret-key), and [rebuild the code](https://tree.taiga.io/project/madiflannery-gvl-genomespace/wiki/building-genomespace-10).
+Then, follow the instructions to [update the genomespace secret key](update_gs_key.md), and rebuild the code.

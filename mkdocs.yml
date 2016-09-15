@@ -1,0 +1,10 @@
+site_name: VLSCI GenomeSpace Docs
+theme: cinder
+pages:
+- Home: index.md
+- Building GenomeSpace:
+  - Version 1.0: build_gs_1.0.md
+  - Version 2.0: build_gs_2.0.md
+- Miscellaneous:
+  - Updating the SSL Certificate: ssl_update.md
+  - Updating the GS Key: update_gs_key.md

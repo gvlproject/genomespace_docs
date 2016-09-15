@@ -1,5 +1,4 @@
 ### How to update the GS secret key
-==============================================
 
 ```
 cd /home/ubuntu/genomespace/gensecretkey
@@ -9,4 +8,4 @@ cd ..
 cp genomespace-secret.key /root/genomespace
 ```
 
-Finally, re-build the code
+Finally, re-build the code.
