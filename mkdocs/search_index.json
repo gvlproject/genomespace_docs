@@ -1,0 +1,54 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-mkdocs", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/build_gs_1.0/", 
+            "text": "", 
+            "title": "Version 1.0"
+        }, 
+        {
+            "location": "/build_gs_2.0/", 
+            "text": "To build Version 1.0 (SimpleDB) of GenomeSpace:\n\n\nsudo su\ncd /mnt/genomespace/SRC/combined\nmvn clean install -PdeployLocal -Dmaven.test.skip=true -DskipTests\n\n\n\n\nTo start the server\n\n\ncd /mnt/genomespace/DEVDEPLOY/virgo/bin\n./startup.sh", 
+            "title": "Version 2.0"
+        }, 
+        {
+            "location": "/ssl_update/", 
+            "text": "How to update the SSL Certificate once expired\n\n\n==============================================\n\n\nEnsure you have root access to the machine.\n\n\nsudo su\ncd /mnt/genomespace/DEVDEPLOY/virgo/config\n\n\n\n\nRemove all old keys and cert files from the directory.\n\n\nWith the key and certificate in .pem format, do the following steps. You'll need to set a password, for consistency, use the one in the tomcat server.xml file under the SSL connector.\n\n\nopenssl pkcs12 -export -inkey genome-edu-au-2016.key -in genome-edu-au-2016.cer -name tomcat -out keystore.p12\nkeytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -destkeystore $JAVA_HOME/jre/lib/security/cacerts\n\n\n\n\nIf it errors because the certificate is already there, delete the existing one:\n\n\nkeytool -delete -alias tomcat -keystore $JAVA_HOME/jre/lib/security/cacerts\n\n\n\n\nFinally, create the keystore file Tomcat will use\n\n\nkeytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -deststoretype jks -destkeystore keystore\n\n\n\n\nThen, follow the instructions to \nupdate the genomespace secret key\n, and \nrebuild the code\n.", 
+            "title": "Updating the SSL Certificate"
+        }, 
+        {
+            "location": "/ssl_update/#how-to-update-the-ssl-certificate-once-expired", 
+            "text": "==============================================  Ensure you have root access to the machine.  sudo su\ncd /mnt/genomespace/DEVDEPLOY/virgo/config  Remove all old keys and cert files from the directory.  With the key and certificate in .pem format, do the following steps. You'll need to set a password, for consistency, use the one in the tomcat server.xml file under the SSL connector.  openssl pkcs12 -export -inkey genome-edu-au-2016.key -in genome-edu-au-2016.cer -name tomcat -out keystore.p12\nkeytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -destkeystore $JAVA_HOME/jre/lib/security/cacerts  If it errors because the certificate is already there, delete the existing one:  keytool -delete -alias tomcat -keystore $JAVA_HOME/jre/lib/security/cacerts  Finally, create the keystore file Tomcat will use  keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -deststoretype jks -destkeystore keystore  Then, follow the instructions to  update the genomespace secret key , and  rebuild the code .", 
+            "title": "How to update the SSL Certificate once expired"
+        }, 
+        {
+            "location": "/update_gs_key/", 
+            "text": "How to update the GS secret key\n\n\n==============================================\n\n\ncd /home/ubuntu/genomespace/gensecretkey\n./gengssecretkey.sh\nmv genomespace-secret.key ..\ncd ..\ncp genomespace-secret.key /root/genomespace\n\n\n\n\nFinally, re-build the code", 
+            "title": "Updating the GS Key"
+        }, 
+        {
+            "location": "/update_gs_key/#how-to-update-the-gs-secret-key", 
+            "text": "==============================================  cd /home/ubuntu/genomespace/gensecretkey\n./gengssecretkey.sh\nmv genomespace-secret.key ..\ncd ..\ncp genomespace-secret.key /root/genomespace  Finally, re-build the code", 
+            "title": "How to update the GS secret key"
+        }
+    ]
+}
