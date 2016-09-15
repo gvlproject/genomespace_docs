@@ -147,16 +147,25 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>To build Version 1.0 (SimpleDB) of GenomeSpace:</p>
+<p>To build Version 2.0 (MongoDB) of GenomeSpace:</p>
 <pre><code>sudo su
-cd /mnt/genomespace/SRC/combined
-mvn clean install -PdeployLocal -Dmaven.test.skip=true -DskipTests
+cd /home/ubuntu/genomespace/SRC/combined
+mvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true
 </code></pre>
 
+<p>Ensure you have a env-dev.properties file in the home directory, which contains the URL's and credentials required for GenomeSpace. See <a href="https://github.com/gvlproject/gvl.ansible.genomespace/blob/new_genomespace/templates/env-dev.properties.j2">this example</a></p>
 <p>To start the server</p>
-<pre><code>cd /mnt/genomespace/DEVDEPLOY/virgo/bin
-./startup.sh
-</code></pre></div>
+<pre><code>sudo service tomcat7 restart
+</code></pre>
+
+<p>If you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):</p>
+<pre><code>rm -r /var/lib/tomcat7/webapps/datamanager*
+rm -r /var/lib/tomcat7/webapps/atm*
+rm -r /var/lib/tomcat7/webapps/identityServer*
+rm -r /var/lib/tomcat7/webapps/jsui*
+</code></pre>
+
+<p>Then re-build the code and restart the server.</p></div>
         
     </div>
 

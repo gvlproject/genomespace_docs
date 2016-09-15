@@ -22,12 +22,12 @@
         }, 
         {
             "location": "/build_gs_1.0/", 
-            "text": "", 
+            "text": "To build Version 1.0 (SimpleDB) of GenomeSpace:\n\n\nsudo su\ncd /mnt/genomespace/SRC/combined\nmvn clean install -PdeployLocal -Dmaven.test.skip=true -DskipTests\n\n\n\n\nTo start the server\n\n\ncd /mnt/genomespace/DEVDEPLOY/virgo/bin\n./startup.sh", 
             "title": "Version 1.0"
         }, 
         {
             "location": "/build_gs_2.0/", 
-            "text": "To build Version 1.0 (SimpleDB) of GenomeSpace:\n\n\nsudo su\ncd /mnt/genomespace/SRC/combined\nmvn clean install -PdeployLocal -Dmaven.test.skip=true -DskipTests\n\n\n\n\nTo start the server\n\n\ncd /mnt/genomespace/DEVDEPLOY/virgo/bin\n./startup.sh", 
+            "text": "To build Version 2.0 (MongoDB) of GenomeSpace:\n\n\nsudo su\ncd /home/ubuntu/genomespace/SRC/combined\nmvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true\n\n\n\n\nEnsure you have a env-dev.properties file in the home directory, which contains the URL's and credentials required for GenomeSpace. See \nthis example\n\n\nTo start the server\n\n\nsudo service tomcat7 restart\n\n\n\n\nIf you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):\n\n\nrm -r /var/lib/tomcat7/webapps/datamanager*\nrm -r /var/lib/tomcat7/webapps/atm*\nrm -r /var/lib/tomcat7/webapps/identityServer*\nrm -r /var/lib/tomcat7/webapps/jsui*\n\n\n\n\nThen re-build the code and restart the server.", 
             "title": "Version 2.0"
         }, 
         {
