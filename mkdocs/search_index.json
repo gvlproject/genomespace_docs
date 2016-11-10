@@ -2,13 +2,13 @@
     "docs": [
         {
             "location": "/", 
-            "text": "VLSCI GenomeSpace Documentation\n\n\n\n\nBuilding GenomeSpace Version 1.0\n\n\nBuilding GenomeSpace Version 2.0\n\n\nUpdating the SSL Certificate\n\n\nUpdating the GenomeSpace key\n\n\nAWS CORS configuration", 
+            "text": "VLSCI GenomeSpace Bible\n\n\nWritten by Madison Flannery, 2016.", 
             "title": "Home"
         }, 
         {
-            "location": "/#vlsci-genomespace-documentation", 
-            "text": "Building GenomeSpace Version 1.0  Building GenomeSpace Version 2.0  Updating the SSL Certificate  Updating the GenomeSpace key  AWS CORS configuration", 
-            "title": "VLSCI GenomeSpace Documentation"
+            "location": "/#vlsci-genomespace-bible", 
+            "text": "Written by Madison Flannery, 2016.", 
+            "title": "VLSCI GenomeSpace Bible"
         }, 
         {
             "location": "/build_gs_1.0/", 
@@ -34,6 +34,86 @@
             "location": "/build_gs_2.0/#caching-issues", 
             "text": "If you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):  rm -r /var/lib/tomcat7/webapps/datamanager*\nrm -r /var/lib/tomcat7/webapps/atm*\nrm -r /var/lib/tomcat7/webapps/identityServer*\nrm -r /var/lib/tomcat7/webapps/jsui*  Then re-build the code and restart the server.", 
             "title": "Caching issues"
+        }, 
+        {
+            "location": "/design_overview/", 
+            "text": "GenomeSpace Design Overview", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/design_overview/#genomespace-design-overview", 
+            "text": "", 
+            "title": "GenomeSpace Design Overview"
+        }, 
+        {
+            "location": "/design_db/", 
+            "text": "GenomeSpace Database Design", 
+            "title": "The Database"
+        }, 
+        {
+            "location": "/design_db/#genomespace-database-design", 
+            "text": "", 
+            "title": "GenomeSpace Database Design"
+        }, 
+        {
+            "location": "/design_jsui/", 
+            "text": "JavaScript User Interface", 
+            "title": "JSUI"
+        }, 
+        {
+            "location": "/design_jsui/#javascript-user-interface", 
+            "text": "", 
+            "title": "JavaScript User Interface"
+        }, 
+        {
+            "location": "/design_idserver/", 
+            "text": "Identity Server/Manager", 
+            "title": "Identity Server"
+        }, 
+        {
+            "location": "/design_idserver/#identity-servermanager", 
+            "text": "", 
+            "title": "Identity Server/Manager"
+        }, 
+        {
+            "location": "/design_datamanager/", 
+            "text": "Data Manager", 
+            "title": "Data Manager"
+        }, 
+        {
+            "location": "/design_datamanager/#data-manager", 
+            "text": "", 
+            "title": "Data Manager"
+        }, 
+        {
+            "location": "/design_atm/", 
+            "text": "Analysis and Tool Manager", 
+            "title": "Analysis and Tool Manager"
+        }, 
+        {
+            "location": "/design_atm/#analysis-and-tool-manager", 
+            "text": "", 
+            "title": "Analysis and Tool Manager"
+        }, 
+        {
+            "location": "/design_cdk/", 
+            "text": "Client Development Kit", 
+            "title": "CDK"
+        }, 
+        {
+            "location": "/design_cdk/#client-development-kit", 
+            "text": "", 
+            "title": "Client Development Kit"
+        }, 
+        {
+            "location": "/swift/", 
+            "text": "OpenStack Swift", 
+            "title": "OpenStack Swift"
+        }, 
+        {
+            "location": "/swift/#openstack-swift", 
+            "text": "", 
+            "title": "OpenStack Swift"
         }, 
         {
             "location": "/ssl_update/", 
@@ -64,6 +144,26 @@
             "location": "/cors_config/#aws-cors-configuration", 
             "text": "See below for the CORS config to add to the default AWS S3 bucket attached to GenomeSpace.  CORSConfiguration \n     CORSRule \n         AllowedOrigin PUT GENOMESPACE URL HERE /AllowedOrigin \n         AllowedMethod GET /AllowedMethod \n         AllowedMethod PUT /AllowedMethod \n         AllowedMethod POST /AllowedMethod \n         AllowedMethod DELETE /AllowedMethod \n         MaxAgeSeconds 3000 /MaxAgeSeconds \n         AllowedHeader * /AllowedHeader \n     /CORSRule  /CORSConfiguration", 
             "title": "AWS CORS Configuration"
+        }, 
+        {
+            "location": "/custom_components/", 
+            "text": "GenomeSpace Australia Custom Components", 
+            "title": "GS-AU Custom Components"
+        }, 
+        {
+            "location": "/custom_components/#genomespace-australia-custom-components", 
+            "text": "", 
+            "title": "GenomeSpace Australia Custom Components"
+        }, 
+        {
+            "location": "/faq/", 
+            "text": "Frequently Asked Questions", 
+            "title": "FAQ"
+        }, 
+        {
+            "location": "/faq/#frequently-asked-questions", 
+            "text": "", 
+            "title": "Frequently Asked Questions"
         }
     ]
 }

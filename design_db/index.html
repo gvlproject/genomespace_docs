@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../img/favicon.ico">
 
-    <title>AWS CORS Config - VLSCI GenomeSpace Bible</title>
+    <title>The Database - VLSCI GenomeSpace Bible</title>
 
     <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -91,7 +91,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">GenomeSpace Design <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -102,8 +102,8 @@
 
                         
                             
-<li >
-    <a href="../design_db/">The Database</a>
+<li class="active">
+    <a href="./">The Database</a>
 </li>
 
                         
@@ -148,7 +148,7 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Miscellaneous <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -165,8 +165,8 @@
 
                         
                             
-<li class="active">
-    <a href="./">AWS CORS Config</a>
+<li >
+    <a href="../cors_config/">AWS CORS Config</a>
 </li>
 
                         
@@ -197,12 +197,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../update_gs_key/">
+                        <a rel="next" href="../design_overview/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../custom_components/">
+                        <a rel="prev" href="../design_jsui/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -227,27 +227,14 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#aws-cors-configuration">AWS CORS Configuration</a></li>
+        <li class="first-level active"><a href="#genomespace-database-design">GenomeSpace Database Design</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="aws-cors-configuration">AWS CORS Configuration</h1>
-<p>See below for the CORS config to add to the default AWS S3 bucket attached to GenomeSpace.</p>
-<pre><code>&lt;CORSConfiguration&gt;
-    &lt;CORSRule&gt;
-        &lt;AllowedOrigin&gt;PUT GENOMESPACE URL HERE&lt;/AllowedOrigin&gt;
-        &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;
-        &lt;AllowedMethod&gt;PUT&lt;/AllowedMethod&gt;
-        &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;
-        &lt;AllowedMethod&gt;DELETE&lt;/AllowedMethod&gt;
-        &lt;MaxAgeSeconds&gt;3000&lt;/MaxAgeSeconds&gt;
-        &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;
-    &lt;/CORSRule&gt;
-&lt;/CORSConfiguration&gt;
-</code></pre></div>
+<h1 id="genomespace-database-design">GenomeSpace Database Design</h1></div>
         
     </div>
 
