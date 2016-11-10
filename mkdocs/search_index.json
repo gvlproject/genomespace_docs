@@ -106,16 +106,6 @@
             "title": "Client Development Kit"
         }, 
         {
-            "location": "/swift/", 
-            "text": "OpenStack Swift", 
-            "title": "OpenStack Swift"
-        }, 
-        {
-            "location": "/swift/#openstack-swift", 
-            "text": "", 
-            "title": "OpenStack Swift"
-        }, 
-        {
             "location": "/ssl_update/", 
             "text": "How to update the SSL Certificate once expired\n\n\nEnsure you have root access to the machine.\n\n\nsudo su\ncd /mnt/genomespace/DEVDEPLOY/virgo/config\n\n\n\n\nRemove all old keys and cert files from the directory.\n\n\nWith the key and certificate in .pem format, do the following steps. You'll need to set a password, for consistency, use the one in the tomcat server.xml file under the SSL connector.\n\n\nopenssl pkcs12 -export -inkey genome-edu-au-2016.key -in genome-edu-au-2016.cer -name tomcat -out keystore.p12\nkeytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -destkeystore $JAVA_HOME/jre/lib/security/cacerts\n\n\n\n\nIf it errors because the certificate is already there, delete the existing one:\n\n\nkeytool -delete -alias tomcat -keystore $JAVA_HOME/jre/lib/security/cacerts\n\n\n\n\nFinally, create the keystore file Tomcat will use\n\n\nkeytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -deststoretype jks -destkeystore keystore\n\n\n\n\nThen, follow the instructions to \nupdate the genomespace secret key\n, and rebuild the code.", 
             "title": "Updating the SSL Certificate"
@@ -154,6 +144,16 @@
             "location": "/custom_components/#genomespace-australia-custom-components", 
             "text": "", 
             "title": "GenomeSpace Australia Custom Components"
+        }, 
+        {
+            "location": "/swift/", 
+            "text": "OpenStack Swift", 
+            "title": "OpenStack Swift"
+        }, 
+        {
+            "location": "/swift/#openstack-swift", 
+            "text": "", 
+            "title": "OpenStack Swift"
         }, 
         {
             "location": "/faq/", 

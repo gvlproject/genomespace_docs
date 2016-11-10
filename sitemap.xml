@@ -72,14 +72,6 @@
     
 
     
-    <url>
-     <loc>None/swift/</loc>
-     <lastmod>2016-11-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
         
     <url>
      <loc>None/ssl_update/</loc>
@@ -101,6 +93,12 @@
         
     <url>
      <loc>None/custom_components/</loc>
+     <lastmod>2016-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/swift/</loc>
      <lastmod>2016-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
