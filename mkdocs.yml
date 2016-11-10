@@ -3,10 +3,10 @@ theme: cinder
 repo_url: "https://github.com/madiflannery/genomespace_docs/tree/master"
 pages:
 - Home: index.md
-- Building GenomeSpace:
+- Build:
   - Version 1.0: build_gs_1.0.md
   - Version 2.0: build_gs_2.0.md
-- GenomeSpace Design:
+- Design:
   - Overview: design_overview.md
   - The Database: design_db.md
   - JSUI: design_jsui.md
@@ -14,10 +14,10 @@ pages:
   - Data Manager: design_datamanager.md
   - Analysis and Tool Manager: design_atm.md
   - CDK: design_cdk.md
-- OpenStack Swift: swift.md
-- Miscellaneous:
+- Other:
   - Updating the SSL Certificate: ssl_update.md
   - Updating the GS Key: update_gs_key.md
   - AWS CORS Config: cors_config.md
   - GS-AU Custom Components: custom_components.md
+  - OpenStack Swift: swift.md
 - FAQ: faq.md
