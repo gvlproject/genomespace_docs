@@ -22,17 +22,27 @@
         }, 
         {
             "location": "/build_gs_2.0/", 
-            "text": "Building v2.0 of GenomeSpace\n\n\nTo build Version 2.0 (MongoDB/Tomcat7) of GenomeSpace:\n\n\nsudo su\ncd /home/ubuntu/genomespace/SRC/combined\nmvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true\n\n\n\n\nEnsure you have a env-dev.properties file in the home directory, which contains the URL's and credentials required for GenomeSpace. See \nthis example\n\n\nTo start the server\n\n\nsudo service tomcat7 restart\n\n\n\n\nCaching issues\n\n\nIf you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):\n\n\nrm -r /var/lib/tomcat7/webapps/datamanager*\nrm -r /var/lib/tomcat7/webapps/atm*\nrm -r /var/lib/tomcat7/webapps/identityServer*\nrm -r /var/lib/tomcat7/webapps/jsui*\n\n\n\n\nThen re-build the code and restart the server.", 
+            "text": "Building v2.0 of GenomeSpace\n\n\nBuilding for the first time?\n\n\nEnsure you have started the cache:\n\n\ncd ~/genomespace/activeMQ/apache-activemq-5.9.0/bin/\nnohup ./activemq console \n\n\n\n\n\nFor the database machine- Ensure you have edited \n/etc/mongod.conf\n file to add the IP of the DB machine:\n\n\ncomma bind_ip = 127.0.0.1,\nGENOMESPACE_DB_MACHINE_IP\n\n\n\n\n\nAdd the DB machine IP into the genomespace env-dev.properties file. More info on this file is below.\n\n\nBuilding GS\n\n\nNOTE: There is a script called 'build' inside SRC/combined that automates this process.\n\n\nTo build Version 2.0 (MongoDB/Tomcat7) of GenomeSpace:\n\n\nsudo su\ncd /home/ubuntu/genomespace/SRC/combined\nmvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true\n\n\n\n\nEnsure you have a env-dev.properties file in the home directory, which contains the URL's and credentials required for GenomeSpace. See \nthis example\n\n\nTo start the server\n\n\nsudo service tomcat7 restart\n\n\n\n\nCaching issues\n\n\nNOTE: There is a script called 'build' inside SRC/combined that automates this process.\n\n\nIf you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):\n\n\nrm -r /var/lib/tomcat7/webapps/datamanager*\nrm -r /var/lib/tomcat7/webapps/atm*\nrm -r /var/lib/tomcat7/webapps/identityServer*\nrm -r /var/lib/tomcat7/webapps/jsui*\n\n\n\n\nThen re-build the code and restart the server.", 
             "title": "Version 2.0"
         }, 
         {
             "location": "/build_gs_2.0/#building-v20-of-genomespace", 
-            "text": "To build Version 2.0 (MongoDB/Tomcat7) of GenomeSpace:  sudo su\ncd /home/ubuntu/genomespace/SRC/combined\nmvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true  Ensure you have a env-dev.properties file in the home directory, which contains the URL's and credentials required for GenomeSpace. See  this example  To start the server  sudo service tomcat7 restart", 
+            "text": "", 
             "title": "Building v2.0 of GenomeSpace"
         }, 
         {
+            "location": "/build_gs_2.0/#building-for-the-first-time", 
+            "text": "Ensure you have started the cache:  cd ~/genomespace/activeMQ/apache-activemq-5.9.0/bin/\nnohup ./activemq console    For the database machine- Ensure you have edited  /etc/mongod.conf  file to add the IP of the DB machine:  comma bind_ip = 127.0.0.1, GENOMESPACE_DB_MACHINE_IP   Add the DB machine IP into the genomespace env-dev.properties file. More info on this file is below.", 
+            "title": "Building for the first time?"
+        }, 
+        {
+            "location": "/build_gs_2.0/#building-gs", 
+            "text": "NOTE: There is a script called 'build' inside SRC/combined that automates this process.  To build Version 2.0 (MongoDB/Tomcat7) of GenomeSpace:  sudo su\ncd /home/ubuntu/genomespace/SRC/combined\nmvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomespace/env-dev.properties -P deployToLocalTomcat -Dmaven.test.skip=true  Ensure you have a env-dev.properties file in the home directory, which contains the URL's and credentials required for GenomeSpace. See  this example  To start the server  sudo service tomcat7 restart", 
+            "title": "Building GS"
+        }, 
+        {
             "location": "/build_gs_2.0/#caching-issues", 
-            "text": "If you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):  rm -r /var/lib/tomcat7/webapps/datamanager*\nrm -r /var/lib/tomcat7/webapps/atm*\nrm -r /var/lib/tomcat7/webapps/identityServer*\nrm -r /var/lib/tomcat7/webapps/jsui*  Then re-build the code and restart the server.", 
+            "text": "NOTE: There is a script called 'build' inside SRC/combined that automates this process.  If you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):  rm -r /var/lib/tomcat7/webapps/datamanager*\nrm -r /var/lib/tomcat7/webapps/atm*\nrm -r /var/lib/tomcat7/webapps/identityServer*\nrm -r /var/lib/tomcat7/webapps/jsui*  Then re-build the code and restart the server.", 
             "title": "Caching issues"
         }, 
         {
@@ -157,13 +167,23 @@
         }, 
         {
             "location": "/faq/", 
-            "text": "Frequently Asked Questions", 
+            "text": "Frequently Asked Questions\n\n\nUpdating the URL - a checklist\n\n\n1. Find \n replace all URL's in the source code (by using find/replace in eclipse)\n2. Open the GenomeSpace env-dev.properties file, and change all the URL's.\n3. Build (using build script in SRC/combined).\n4. Update the config.war file through the Tomcat Manager application.\n\n\n\nThings that commonly go wrong\n\n\n1. Tomcat7 needs restarting. This will solve 99% of GS problems.\n2. The ActiveMQ cache hasn't been started.\n3. The config.war file hasn't been updated.\n4. Something in the GenomeSpace properties file is wrong (e.g. a URL, Database IP)", 
             "title": "FAQ"
         }, 
         {
             "location": "/faq/#frequently-asked-questions", 
             "text": "", 
             "title": "Frequently Asked Questions"
+        }, 
+        {
+            "location": "/faq/#updating-the-url-a-checklist", 
+            "text": "1. Find   replace all URL's in the source code (by using find/replace in eclipse)\n2. Open the GenomeSpace env-dev.properties file, and change all the URL's.\n3. Build (using build script in SRC/combined).\n4. Update the config.war file through the Tomcat Manager application.", 
+            "title": "Updating the URL - a checklist"
+        }, 
+        {
+            "location": "/faq/#things-that-commonly-go-wrong", 
+            "text": "1. Tomcat7 needs restarting. This will solve 99% of GS problems.\n2. The ActiveMQ cache hasn't been started.\n3. The config.war file hasn't been updated.\n4. Something in the GenomeSpace properties file is wrong (e.g. a URL, Database IP)", 
+            "title": "Things that commonly go wrong"
         }
     ]
 }

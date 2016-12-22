@@ -229,12 +229,30 @@
     
         <li class="first-level active"><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
         
+            <li class="second-level"><a href="#updating-the-url-a-checklist">Updating the URL - a checklist</a></li>
+            
+        
+            <li class="second-level"><a href="#things-that-commonly-go-wrong">Things that commonly go wrong</a></li>
+            
+        
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="frequently-asked-questions">Frequently Asked Questions</h1></div>
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<h2 id="updating-the-url-a-checklist">Updating the URL - a checklist</h2>
+<pre><code>1. Find &amp; replace all URL's in the source code (by using find/replace in eclipse)
+2. Open the GenomeSpace env-dev.properties file, and change all the URL's.
+3. Build (using build script in SRC/combined).
+4. Update the config.war file through the Tomcat Manager application.
+</code></pre>
+<h2 id="things-that-commonly-go-wrong">Things that commonly go wrong</h2>
+<pre><code>1. Tomcat7 needs restarting. This will solve 99% of GS problems.
+2. The ActiveMQ cache hasn't been started.
+3. The config.war file hasn't been updated.
+4. Something in the GenomeSpace properties file is wrong (e.g. a URL, Database IP)
+</code></pre></div>
         
     </div>
 

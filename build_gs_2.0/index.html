@@ -229,6 +229,12 @@
     
         <li class="first-level active"><a href="#building-v20-of-genomespace">Building v2.0 of GenomeSpace</a></li>
         
+            <li class="second-level"><a href="#building-for-the-first-time">Building for the first time?</a></li>
+            
+        
+            <li class="second-level"><a href="#building-gs">Building GS</a></li>
+            
+        
             <li class="second-level"><a href="#caching-issues">Caching issues</a></li>
             
         
@@ -238,6 +244,19 @@
         <div class="col-md-9" role="main">
 
 <h1 id="building-v20-of-genomespace">Building v2.0 of GenomeSpace</h1>
+<h2 id="building-for-the-first-time">Building for the first time?</h2>
+<p>Ensure you have started the cache:</p>
+<pre><code>cd ~/genomespace/activeMQ/apache-activemq-5.9.0/bin/
+nohup ./activemq console &amp;
+</code></pre>
+
+<p>For the database machine- Ensure you have edited <code>/etc/mongod.conf</code> file to add the IP of the DB machine:</p>
+<pre><code>comma bind_ip = 127.0.0.1,&lt;GENOMESPACE_DB_MACHINE_IP&gt;
+</code></pre>
+
+<p>Add the DB machine IP into the genomespace env-dev.properties file. More info on this file is below.</p>
+<h2 id="building-gs">Building GS</h2>
+<p><strong>NOTE: There is a script called 'build' inside SRC/combined that automates this process.</strong></p>
 <p>To build Version 2.0 (MongoDB/Tomcat7) of GenomeSpace:</p>
 <pre><code>sudo su
 cd /home/ubuntu/genomespace/SRC/combined
@@ -250,6 +269,7 @@ mvn -X clean install  -am -DskipTests -Denv-properties-file=/home/ubuntu/genomes
 </code></pre>
 
 <h2 id="caching-issues">Caching issues</h2>
+<p><strong>NOTE: There is a script called 'build' inside SRC/combined that automates this process.</strong></p>
 <p>If you experience tomcat/maven caching issues (i.e. your changes aren't being reflected after a build/restart):</p>
 <pre><code>rm -r /var/lib/tomcat7/webapps/datamanager*
 rm -r /var/lib/tomcat7/webapps/atm*

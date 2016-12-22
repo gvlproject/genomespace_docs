@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,13 @@
         
     <url>
      <loc>None/build_gs_1.0/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/build_gs_2.0/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,43 +29,43 @@
         
     <url>
      <loc>None/design_overview/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/design_db/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/design_jsui/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/design_idserver/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/design_datamanager/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/design_atm/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/design_cdk/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -75,31 +75,31 @@
         
     <url>
      <loc>None/ssl_update/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/update_gs_key/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/cors_config/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/custom_components/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/swift/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -108,7 +108,7 @@
     
     <url>
      <loc>None/faq/</loc>
-     <lastmod>2016-11-10</lastmod>
+     <lastmod>2016-12-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
