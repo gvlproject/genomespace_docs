@@ -1,5 +1,5 @@
-# VLSCI GenomeSpace Bible
-
-Written by Madison Flannery, 2016.
+# VLSCI GenomeSpace
 
 ![GS AU Logo](https://genomespace-dev.genome.edu.au/jsui/images/GenomeSpaceVLSCI_splash.png)
+
+Madison Flannery | 2017
