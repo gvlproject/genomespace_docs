@@ -8,13 +8,13 @@ pages:
   - Version 2.0: build_gs_2.0.md
 - Design:
   - Overview: design_overview.md
-  - The Database: design_db.md
   - JSUI: design_jsui.md
   - Identity Server: design_idserver.md
   - Data Manager: design_datamanager.md
   - Analysis and Tool Manager: design_atm.md
   - CDK: design_cdk.md
 - Other:
+  - Maintenance page: maintenance_page.md
   - Updating the SSL Certificate: ssl_update.md
   - Updating the GS Key: update_gs_key.md
   - AWS CORS Config: cors_config.md

@@ -1,1 +1,0 @@
-# GenomeSpace Database Design
