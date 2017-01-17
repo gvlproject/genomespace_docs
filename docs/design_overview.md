@@ -1,6 +1,7 @@
 # GenomeSpace Design Overview
 
 GenomeSpace is made up of the following main components:
+
 - Analysis and Tool Manager (ATM) - Handles everything tool related.
 - Data Manager - Handles everything data related.
 - Identity Server & Manager - Handles everything user related.
