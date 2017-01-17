@@ -47,12 +47,12 @@
         }, 
         {
             "location": "/design_overview/", 
-            "text": "GenomeSpace Design Overview\n\n\nGenomeSpace is made up of the following main components:\n- Analysis and Tool Manager (ATM) - Handles everything tool related.\n- Data Manager - Handles everything data related.\n- Identity Server \n Manager - Handles everything user related.\n- JSUI - The user interface. Mostly the standard vanilla javascript, html, css, but with a bit of AngularJS.\n- The database - Stores all info re: tools, connected data sources, public data, user info, etc.\n- Client Development Kit - a way for developers to interact with GS without the UI. It's a jar file.", 
+            "text": "GenomeSpace Design Overview\n\n\nGenomeSpace is made up of the following main components:\n\n\n\n\nAnalysis and Tool Manager (ATM) - Handles everything tool related.\n\n\nData Manager - Handles everything data related.\n\n\nIdentity Server \n Manager - Handles everything user related.\n\n\nJSUI - The user interface. Mostly the standard vanilla javascript, html, css, but with a bit of AngularJS.\n\n\nThe database - Stores all info re: tools, connected data sources, public data, user info, etc.\n\n\nClient Development Kit - a way for developers to interact with GS without the UI. It's a jar file.", 
             "title": "Overview"
         }, 
         {
             "location": "/design_overview/#genomespace-design-overview", 
-            "text": "GenomeSpace is made up of the following main components:\n- Analysis and Tool Manager (ATM) - Handles everything tool related.\n- Data Manager - Handles everything data related.\n- Identity Server   Manager - Handles everything user related.\n- JSUI - The user interface. Mostly the standard vanilla javascript, html, css, but with a bit of AngularJS.\n- The database - Stores all info re: tools, connected data sources, public data, user info, etc.\n- Client Development Kit - a way for developers to interact with GS without the UI. It's a jar file.", 
+            "text": "GenomeSpace is made up of the following main components:   Analysis and Tool Manager (ATM) - Handles everything tool related.  Data Manager - Handles everything data related.  Identity Server   Manager - Handles everything user related.  JSUI - The user interface. Mostly the standard vanilla javascript, html, css, but with a bit of AngularJS.  The database - Stores all info re: tools, connected data sources, public data, user info, etc.  Client Development Kit - a way for developers to interact with GS without the UI. It's a jar file.", 
             "title": "GenomeSpace Design Overview"
         }, 
         {
