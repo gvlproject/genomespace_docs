@@ -2,13 +2,13 @@
     "docs": [
         {
             "location": "/", 
-            "text": "VLSCI GenomeSpace Bible\n\n\nWritten by Madison Flannery, 2016.", 
+            "text": "VLSCI GenomeSpace\n\n\n\n\nMadison Flannery | 2017", 
             "title": "Home"
         }, 
         {
-            "location": "/#vlsci-genomespace-bible", 
-            "text": "Written by Madison Flannery, 2016.", 
-            "title": "VLSCI GenomeSpace Bible"
+            "location": "/#vlsci-genomespace", 
+            "text": "Madison Flannery | 2017", 
+            "title": "VLSCI GenomeSpace"
         }, 
         {
             "location": "/build_gs_1.0/", 
@@ -47,47 +47,57 @@
         }, 
         {
             "location": "/design_overview/", 
-            "text": "GenomeSpace Design Overview", 
+            "text": "GenomeSpace Design Overview\n\n\nGenomeSpace is made up of the following main components:\n- Analysis and Tool Manager (ATM) - Handles everything tool related.\n- Data Manager - Handles everything data related.\n- Identity Server \n Manager - Handles everything user related.\n- JSUI - The user interface. Mostly the standard vanilla javascript, html, css, but with a bit of AngularJS.\n- The database - Stores all info re: tools, connected data sources, public data, user info, etc.\n- Client Development Kit - a way for developers to interact with GS without the UI. It's a jar file.", 
             "title": "Overview"
         }, 
         {
             "location": "/design_overview/#genomespace-design-overview", 
-            "text": "", 
+            "text": "GenomeSpace is made up of the following main components:\n- Analysis and Tool Manager (ATM) - Handles everything tool related.\n- Data Manager - Handles everything data related.\n- Identity Server   Manager - Handles everything user related.\n- JSUI - The user interface. Mostly the standard vanilla javascript, html, css, but with a bit of AngularJS.\n- The database - Stores all info re: tools, connected data sources, public data, user info, etc.\n- Client Development Kit - a way for developers to interact with GS without the UI. It's a jar file.", 
             "title": "GenomeSpace Design Overview"
         }, 
         {
-            "location": "/design_db/", 
-            "text": "GenomeSpace Database Design", 
-            "title": "The Database"
-        }, 
-        {
-            "location": "/design_db/#genomespace-database-design", 
-            "text": "", 
-            "title": "GenomeSpace Database Design"
-        }, 
-        {
             "location": "/design_jsui/", 
-            "text": "JavaScript User Interface", 
+            "text": "JavaScript User Interface\n\n\n\n\nThe JS/HTML/CSS is under src -\n main -\n webapp.\n\n\nThis is by far the easiest part of GS.\n\n\nAll the folders should be pretty self-explanatory.\n\n\nThe menu's are built dynamically using javascript (menu.js).\n\n\nUploads are done client-side (javascript).\n\n\nThe easiest way to debug issues in JSUI is by copying text from the part of the interface and searching for it.", 
             "title": "JSUI"
         }, 
         {
             "location": "/design_jsui/#javascript-user-interface", 
-            "text": "", 
+            "text": "The JS/HTML/CSS is under src -  main -  webapp.  This is by far the easiest part of GS.  All the folders should be pretty self-explanatory.  The menu's are built dynamically using javascript (menu.js).  Uploads are done client-side (javascript).  The easiest way to debug issues in JSUI is by copying text from the part of the interface and searching for it.", 
             "title": "JavaScript User Interface"
         }, 
         {
             "location": "/design_idserver/", 
-            "text": "Identity Server/Manager", 
+            "text": "Identity Server and Manager\n\n\n\n\nThis deals with all things user-related.\n\n\n\n\nIdentityManager\n\n\n\n\nThis module contains the 'managers' for 3 main things:\n\n\nUsers - username, password, etc.\n\n\nUserProfile - this includes things like what tools a user has on their custom toolbars, any other custom settings.\n\n\nGroups - being able to share things with a group of other users. What groups a user manages, what groups they're a member of, etc.\n\n\n\n\n\n\n\n\nIdentityServer\n\n\n\n\n\n\nUnder 'auth', you'll find 2 folders:\n\n\n\n\n'basic' - this is basic authentication for genomespace- send username, password, it'll give you an auth token.\n\n\n'openid' - this is OpenID based auth. Often tools (e.g. Galaxy) will use this type of auth to avoid users entering passwords all the time.\n\n\n\n\n\n\n\n\nUnder 'identity' you'll find some stuff for group management and user management.\n\n\n\n\n\n\nidentityserver-messages\n\n\n\n\nInside the 'identityserver-messages' module, you'll find the model for the user related things e.g. User, Groups, etc. This module is a dependency of lots of things, e.g. CDK.\n\n\n\n\nidentityserver-common\n\n\n\n\nInside the 'identityserver-common' module you'll find some user constants.", 
             "title": "Identity Server"
         }, 
         {
-            "location": "/design_idserver/#identity-servermanager", 
-            "text": "", 
-            "title": "Identity Server/Manager"
+            "location": "/design_idserver/#identity-server-and-manager", 
+            "text": "This deals with all things user-related.", 
+            "title": "Identity Server and Manager"
+        }, 
+        {
+            "location": "/design_idserver/#identitymanager", 
+            "text": "This module contains the 'managers' for 3 main things:  Users - username, password, etc.  UserProfile - this includes things like what tools a user has on their custom toolbars, any other custom settings.  Groups - being able to share things with a group of other users. What groups a user manages, what groups they're a member of, etc.", 
+            "title": "IdentityManager"
+        }, 
+        {
+            "location": "/design_idserver/#identityserver", 
+            "text": "Under 'auth', you'll find 2 folders:   'basic' - this is basic authentication for genomespace- send username, password, it'll give you an auth token.  'openid' - this is OpenID based auth. Often tools (e.g. Galaxy) will use this type of auth to avoid users entering passwords all the time.     Under 'identity' you'll find some stuff for group management and user management.", 
+            "title": "IdentityServer"
+        }, 
+        {
+            "location": "/design_idserver/#identityserver-messages", 
+            "text": "Inside the 'identityserver-messages' module, you'll find the model for the user related things e.g. User, Groups, etc. This module is a dependency of lots of things, e.g. CDK.", 
+            "title": "identityserver-messages"
+        }, 
+        {
+            "location": "/design_idserver/#identityserver-common", 
+            "text": "Inside the 'identityserver-common' module you'll find some user constants.", 
+            "title": "identityserver-common"
         }, 
         {
             "location": "/design_datamanager/", 
-            "text": "Data Manager", 
+            "text": "Data Manager\n\n\ndm-core\n\n\nDm-core is one of the biggest GS modules... it's messy!\n\n\n\n\nMost (but unfortunately not all...) of the storage specific stuff is under 'storage', and then the respective folder for the storage type you're dealing with.\n\n\nThe rest of the main stuff lives in 'core'\n\n\nThe storage stuff is relatively abstracted out with Interfaces etc, majority of which live in 'core', and any implementation will generally have 'Impl' at the end of the name.\n\n\nDebugging issues with storage: apart from the stack trace, any other issues can generally be solved by starting inside 'resource', finding the corresponding URL segment, and following through the code.\n\n\nLogging can be easily done using the 'swiftlogger' class (can't remember it's exact location... easily searchable though).\n\n\n\n\ndm-messages\n\n\nContains a whole bunch of stuff mosyly used by other modules and the CDK.\n\n\ndm-security\n\n\nContains stuff to do with ACL's (access control).", 
             "title": "Data Manager"
         }, 
         {
@@ -96,24 +106,49 @@
             "title": "Data Manager"
         }, 
         {
+            "location": "/design_datamanager/#dm-core", 
+            "text": "Dm-core is one of the biggest GS modules... it's messy!   Most (but unfortunately not all...) of the storage specific stuff is under 'storage', and then the respective folder for the storage type you're dealing with.  The rest of the main stuff lives in 'core'  The storage stuff is relatively abstracted out with Interfaces etc, majority of which live in 'core', and any implementation will generally have 'Impl' at the end of the name.  Debugging issues with storage: apart from the stack trace, any other issues can generally be solved by starting inside 'resource', finding the corresponding URL segment, and following through the code.  Logging can be easily done using the 'swiftlogger' class (can't remember it's exact location... easily searchable though).", 
+            "title": "dm-core"
+        }, 
+        {
+            "location": "/design_datamanager/#dm-messages", 
+            "text": "Contains a whole bunch of stuff mosyly used by other modules and the CDK.", 
+            "title": "dm-messages"
+        }, 
+        {
+            "location": "/design_datamanager/#dm-security", 
+            "text": "Contains stuff to do with ACL's (access control).", 
+            "title": "dm-security"
+        }, 
+        {
             "location": "/design_atm/", 
-            "text": "Analysis and Tool Manager", 
+            "text": "Analysis and Tool Manager\n\n\nThis module basically takes care of itself. All tool related things.\n\n\nThe main pieces of code are to do with adding private tools, and dealing with associated data formats. The most common data format related issue is when it complains about not having all of them- they're stored in the database, so no code changes generally required.", 
             "title": "Analysis and Tool Manager"
         }, 
         {
             "location": "/design_atm/#analysis-and-tool-manager", 
-            "text": "", 
+            "text": "This module basically takes care of itself. All tool related things.  The main pieces of code are to do with adding private tools, and dealing with associated data formats. The most common data format related issue is when it complains about not having all of them- they're stored in the database, so no code changes generally required.", 
             "title": "Analysis and Tool Manager"
         }, 
         {
             "location": "/design_cdk/", 
-            "text": "Client Development Kit", 
+            "text": "Client Development Kit\n\n\nDocumentation for this can be found on the Broad's website (genomespace.org).\n\n\nDesign overview similar to GS itself, there's a client for analysis \n tool manager, data manager, group manager, and user manager.\n\n\nThis is used in the sepsis project- we added a swift upload function, and a test script can be found at https://github.com/madiflannery/genomespace_cdk_test", 
             "title": "CDK"
         }, 
         {
             "location": "/design_cdk/#client-development-kit", 
-            "text": "", 
+            "text": "Documentation for this can be found on the Broad's website (genomespace.org).  Design overview similar to GS itself, there's a client for analysis   tool manager, data manager, group manager, and user manager.  This is used in the sepsis project- we added a swift upload function, and a test script can be found at https://github.com/madiflannery/genomespace_cdk_test", 
             "title": "Client Development Kit"
+        }, 
+        {
+            "location": "/maintenance_page/", 
+            "text": "Maintenance Page\n\n\nThe maintenance page lives at https://github.com/madiflannery/genomespace_maintenance\n\n\nIt is already inside $TOMCAT_HOME/webapps/maintenance\n\n\nTo put into maintenance mode, make the maintenance page the default webapp:\n\n\ncd $TOMCAT_HOME/webapps\nmv ROOT ROOT_TMP\nmv maintenance ROOT\n\n\n\n\nMake sure you also update the GVL Status page, and pause the UptimeRobot monitor.\n\n\nYou can still access GenomeSpace by adding the /jsui to the URL, so you can test before you launch again.\n\n\nTo take out of maintenance mode:\n\n\ncd $TOMCAT_HOME/webapps\nmv ROOT maintenance\nmv ROOT_TMP ROOT", 
+            "title": "Maintenance page"
+        }, 
+        {
+            "location": "/maintenance_page/#maintenance-page", 
+            "text": "The maintenance page lives at https://github.com/madiflannery/genomespace_maintenance  It is already inside $TOMCAT_HOME/webapps/maintenance  To put into maintenance mode, make the maintenance page the default webapp:  cd $TOMCAT_HOME/webapps\nmv ROOT ROOT_TMP\nmv maintenance ROOT  Make sure you also update the GVL Status page, and pause the UptimeRobot monitor.  You can still access GenomeSpace by adding the /jsui to the URL, so you can test before you launch again.  To take out of maintenance mode:  cd $TOMCAT_HOME/webapps\nmv ROOT maintenance\nmv ROOT_TMP ROOT", 
+            "title": "Maintenance Page"
         }, 
         {
             "location": "/ssl_update/", 
@@ -147,22 +182,22 @@
         }, 
         {
             "location": "/custom_components/", 
-            "text": "GenomeSpace Australia Custom Components", 
+            "text": "GenomeSpace Australia Custom Components\n\n\nThings that were developed at VLSCI:\n\n\n\n\nAll of the OpenStack Swift functionality. I.e. the ability to connect a swift container, upload to it, download from it, get public URL's, and all other file operations. Note that there is no sharing with Swift due to OpenStack's design.\n\n\nThe 'import from URL' functionality.\n\n\n\n\nThings that differ between Broad's GS and GS AU:\n\n\n\n\nWe no longer support Dropbox \n Google Drive. This is because uploads to these storage types actually go via the genomespace s3 bucket and users are not informed of this.\n\n\nA lot of the Broad's external resources e.g. recipes, their user groups, etc are not linked under the 'help' section.\n\n\nThere's an extra step in setting up a private s3 bucket - adding the CORS config.\n\n\nUsers don't have a 'home' folder, i.e., no default storage.\n\n\nThe ability to upload custom tool icons is turned off due to lack of home folder.", 
             "title": "GS-AU Custom Components"
         }, 
         {
             "location": "/custom_components/#genomespace-australia-custom-components", 
-            "text": "", 
+            "text": "Things that were developed at VLSCI:   All of the OpenStack Swift functionality. I.e. the ability to connect a swift container, upload to it, download from it, get public URL's, and all other file operations. Note that there is no sharing with Swift due to OpenStack's design.  The 'import from URL' functionality.   Things that differ between Broad's GS and GS AU:   We no longer support Dropbox   Google Drive. This is because uploads to these storage types actually go via the genomespace s3 bucket and users are not informed of this.  A lot of the Broad's external resources e.g. recipes, their user groups, etc are not linked under the 'help' section.  There's an extra step in setting up a private s3 bucket - adding the CORS config.  Users don't have a 'home' folder, i.e., no default storage.  The ability to upload custom tool icons is turned off due to lack of home folder.", 
             "title": "GenomeSpace Australia Custom Components"
         }, 
         {
             "location": "/swift/", 
-            "text": "OpenStack Swift", 
+            "text": "OpenStack Swift\n\n\nThe VLSCI-developed swift functionality is done very similarly to s3.\n\n\nFile upload: SwiftMultipartUploadInfoManager.java\nSmall objects OK in one piece, bigger files are split and done using a multipart upload.\nJSUI will decide if its a multipart upload or not.\nThere'll be a signed URL for the upload to swift.\n\n\nLarge objects are stored as Dynamic Large Objects: Basically a whole bunch of file chunks in a folder, with a manifest describing where the chunks are. When you 'download' the tile, swift will sort the chunks by their name and concatenate them to make 1 file.\n\n\nConnecting a swift container: You need username + password + tenancy + container name. The username+pwd+tenancy combo is stored in RAM, so it's lost when the server is restarted and the password will need to be re-entered. Then all containers in a single tenancy will be re-attached. If you have multiple containers over multiple tenancies, you'll need to re-enter the password multiple times.", 
             "title": "OpenStack Swift"
         }, 
         {
             "location": "/swift/#openstack-swift", 
-            "text": "", 
+            "text": "The VLSCI-developed swift functionality is done very similarly to s3.  File upload: SwiftMultipartUploadInfoManager.java\nSmall objects OK in one piece, bigger files are split and done using a multipart upload.\nJSUI will decide if its a multipart upload or not.\nThere'll be a signed URL for the upload to swift.  Large objects are stored as Dynamic Large Objects: Basically a whole bunch of file chunks in a folder, with a manifest describing where the chunks are. When you 'download' the tile, swift will sort the chunks by their name and concatenate them to make 1 file.  Connecting a swift container: You need username + password + tenancy + container name. The username+pwd+tenancy combo is stored in RAM, so it's lost when the server is restarted and the password will need to be re-entered. Then all containers in a single tenancy will be re-attached. If you have multiple containers over multiple tenancies, you'll need to re-enter the password multiple times.", 
             "title": "OpenStack Swift"
         }, 
         {

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="shortcut icon" href="../img/favicon.ico">
 
-    <title>The Database - VLSCI GenomeSpace Bible</title>
+    <title>Maintenance page - VLSCI GenomeSpace Bible</title>
 
     <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -91,19 +91,13 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
     <a href="../design_overview/">Overview</a>
-</li>
-
-                        
-                            
-<li class="active">
-    <a href="./">The Database</a>
 </li>
 
                         
@@ -142,9 +136,15 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Maintenance page</a>
+</li>
+
                         
                             
 <li >
@@ -197,12 +197,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../design_overview/">
+                        <a rel="next" href="../design_cdk/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../design_jsui/">
+                        <a rel="prev" href="../ssl_update/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -227,14 +227,29 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="first-level active"><a href="#genomespace-database-design">GenomeSpace Database Design</a></li>
+        <li class="first-level active"><a href="#maintenance-page">Maintenance Page</a></li>
         
     
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="genomespace-database-design">GenomeSpace Database Design</h1></div>
+<h1 id="maintenance-page">Maintenance Page</h1>
+<p>The maintenance page lives at https://github.com/madiflannery/genomespace_maintenance</p>
+<p>It is already inside $TOMCAT_HOME/webapps/maintenance</p>
+<p>To put into maintenance mode, make the maintenance page the default webapp:</p>
+<pre><code>cd $TOMCAT_HOME/webapps
+mv ROOT ROOT_TMP
+mv maintenance ROOT
+</code></pre>
+
+<p>Make sure you also update the GVL Status page, and pause the UptimeRobot monitor.</p>
+<p>You can still access GenomeSpace by adding the /jsui to the URL, so you can test before you launch again.</p>
+<p>To take out of maintenance mode:</p>
+<pre><code>cd $TOMCAT_HOME/webapps
+mv ROOT maintenance
+mv ROOT_TMP ROOT
+</code></pre></div>
         
     </div>
 
